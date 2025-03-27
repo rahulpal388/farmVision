@@ -10,6 +10,7 @@ function Gradient({
   conic?: boolean;
   className?: string;
 }) {
+  
   return (
     <span
       className={`absolute mix-blend-normal will-change-[filter] rounded-[100%] ${
