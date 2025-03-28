@@ -1,13 +1,16 @@
-import React from "react";
+
+import { Features } from "./components/features";
+import { HeroSection } from "./components/herosection";
+import { NavBar } from "./components/NavBar";
 
 
 
-export default function Home(){
+export default function Home() {
+
   return <>
-  <div className="flex justify-center items-center h-screen w-screen">
-    <h1 className="text-2xl font-bold ">
-      farm Vision
-    </h1>
-  </div>
+    <NavBar />
+    <HeroSection />
+    <Features />
+
   </>
 }
