@@ -6,7 +6,6 @@ export function HeroSection() {
         <div>
             <div>
                 {/* there will be a video that will disply here  */}
-                {/* <img src="" alt="" /> */}
             </div>
 
             {/* this div will  be on top of the image or video use an image to get reference */}
