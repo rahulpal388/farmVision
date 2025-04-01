@@ -16,7 +16,7 @@
   }
 } */
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +24,20 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+
+/* Hide scrollbar for all browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Ensure scrolling still works */
+body {
+  overflow: auto;
 }
