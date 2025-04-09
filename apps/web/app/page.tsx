@@ -8,13 +8,17 @@ import { NavBar } from "../components/NavBar";
 export default function Home() {
 
   return <>
-    {/* <NavBar />
-    <HeroSection />
-    <Features /> */}
-    <div className="flex justify-center">
-      <Button placeholder="click me" type="primary" onClick={() => {
-        console.log("asdf")
-      }} />
+
+    <div className="">
+      <div>
+        <NavBar />
+
+
+      </div>
+      <div>
+        <HeroSection />
+      </div>
+
     </div>
   </>
 }
