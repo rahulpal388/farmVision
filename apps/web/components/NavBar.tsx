@@ -1,17 +1,23 @@
+
 import { AlignLeft } from "lucide-react";
+
 
 
 export function NavBar() {
 
     return <>
+
         <div className="  flex  justify-between px-6 py-5 z-50 bg-transparent bg-white p-6 rounded-2xl shadow-xl  ">
             {/*  logo */}
             <div className="max-md:hidden">
                 <h1 >Farm Vision</h1>
+
+      
             </div>
 
 
             {/* navbar items */}
+
             <div >
                 <div className="flex gap-10 max-md:hidden">
                     <div>
@@ -57,6 +63,7 @@ export function NavBar() {
                     <button>SignIn</button>
                 </div>
             </div>
+   
         </div>
 
     </>
