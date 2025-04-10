@@ -4,10 +4,13 @@ import { AlignLeft } from "lucide-react";
 export function NavBar() {
 
     return <>
-        <div className="  flex  justify-between px-6 py-5 z-50 bg-transparent bg-white p-6 rounded-2xl shadow-xl  ">
+        <div className="  flex bg-green-400 justify-between px-6 py-5 z-50 bg-transparent  p-6 rounded-2xl shadow-xl  ">
             {/*  logo */}
             <div className="max-md:hidden">
-                <h1 >Farm Vision</h1>
+                {/* <h1 >Farm Vision</h1>
+                <h1 >Farmvison</h1> */}
+
+                <img className="h-7 w-36" src="/farmvisonLogo.png" alt="" />
             </div>
 
 
