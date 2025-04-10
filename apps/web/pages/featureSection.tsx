@@ -1,4 +1,4 @@
-import { FeatureSectionCart } from "../components/featureSectionCart";
+import { FeatureSectionCart } from "../app/components/featureSectionCart";
 
 
 const farmVisionFeatures = [

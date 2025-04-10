@@ -1,9 +1,9 @@
 "use client"
 
 import { ReactNode, useState } from "react";
-import { DashboardNavbar } from "../../components/dashboard/navbar.dashboard";
-import { DashboardSideBar } from "../../components/dashboard/sidebar.dashboard";
-import { DashboardMainPage } from "../../components/dashboard/mainContent.dashboard";
+import { DashboardNavbar } from "../components/dashboard/navbar.dashboard";
+import { DashboardSideBar } from "../components/dashboard/sidebar.dashboard";
+import { DashboardMainPage } from "../components/dashboard/mainContent.dashboard";
 
 
 export type ICurrentItems = "weather" | "market_Price" | "soil_health" | "fertilizers" | "chats" | "blogs"

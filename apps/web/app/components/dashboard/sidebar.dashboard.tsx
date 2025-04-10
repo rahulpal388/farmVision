@@ -1,5 +1,5 @@
 import React, { SetStateAction } from "react";
-import { ICurrentItems } from "../../app/dashboard/layout";
+import { ICurrentItems } from "../../dashboard/layout";
 import { DashboardSideBarItems } from "./sidebarItems.dashboard";
 
 

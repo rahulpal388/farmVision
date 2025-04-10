@@ -1,43 +1,22 @@
+/* global.css */
+
+/* Import Tailwind's default styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-} */
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-
-
-/* Hide scrollbar for all browsers */
-::-webkit-scrollbar {
-  display: none;
-}
-
-/* For Firefox */
-html {
-  scrollbar-width: none;
-}
-
-/* Ensure scrolling still works */
+/* Add your custom global styles here */
 body {
-  overflow: auto;
+  font-family: 'Arial', sans-serif;
 }
+
+/* For example, add custom styles for background or text color */
+body {
+  background-color: #f5f5f5;
+}
+
+h1 {
+  color: #333;
+}
+
+/* You can also add custom Tailwind configuration here */

@@ -1,8 +1,10 @@
+"use client"
 import { AlignLeft } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 
 export function NavBar() {
-
+    const { t, i18n } = useTranslation()
     return <>
         <div className="  flex bg-green-400 justify-between px-6 py-5 z-50 bg-transparent  p-6 rounded-2xl shadow-xl  ">
             {/*  logo */}
@@ -18,10 +20,10 @@ export function NavBar() {
             <div >
                 <div className="flex gap-10 max-md:hidden">
                     <div>
-                        <h1>Home</h1>
+                        <h1>{t('home')}</h1>
                     </div>
                     <div>
-                        <h1>Features</h1>
+                        <h1>{t("feature")}</h1>
                         {/* display the options when hover on the features */}
                         <select name="" id="" className="hidden">
                             <option value="weather">Weather</option>
@@ -48,9 +50,10 @@ export function NavBar() {
             {/* language */}
             <div className="flex gap-6">
                 <div>
-                    <select name="" id="">
-                        <option value="english">English</option>
-                        <option value="hindi">Hindi</option>
+                    {/*  */}
+                    <select name="" id="" onChange={(e) => { i18n.changeLanguage(`${e.currentTarget.value}`) }} >
+                        <option value="en">English</option>
+                        <option value="hi">Hindi</option>
                     </select>
                 </div>
                 <div>

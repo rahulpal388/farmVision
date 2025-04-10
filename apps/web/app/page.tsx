@@ -1,12 +1,18 @@
-import { HeroSection } from "../components/herosection";
-import { NavBar } from "../components/NavBar";
+"use client"
+import { HeroSection } from "./components/herosection";
+import { NavBar } from "./components/NavBar";
 import { FeatureSection } from "../pages/featureSection";
 import { Footer } from "../pages/footer";
-
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+
   return <>
-    <div className="   ">
+    <div className="">
+
+
+
+
       <div>
         <NavBar />
       </div>
