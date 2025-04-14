@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { FeatureSectionCart } from "../app/components/featureSectionCart";
 
 
@@ -32,19 +33,20 @@ const farmVisionFeatures = [
 
 
 export function FeatureSection() {
+    const { t, i18n } = useTranslation()
     return <>
 
-        <div className=" bg-green-100  px-6 sm:px-12 lg:px-24 pt-10 pb-10  ">
+        <div className="   px-6 sm:px-12 lg:px-24 pt-10 pb-10  ">
             <div className="mb-10">
-                <h1 className="text-3xl  text-center  ">Features </h1>
+                <h1 className="text-3xl  text-center  ">{t('feature.features')} </h1>
             </div>
             <div>
                 {farmVisionFeatures.map((x, i) => (
                     <FeatureSectionCart
                         key={i}
                         isReverse={((i + 1) % 2) === 0}
-                        heading={x.heading}
-                        description={x.description}
+                        heading={t(`feature.card${i + 1}.title`)}
+                        description={t(`feature.card${i + 1}.description`)}
                         src={x.src}
                     />
                 ))}

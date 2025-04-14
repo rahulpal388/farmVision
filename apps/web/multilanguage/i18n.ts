@@ -10,14 +10,17 @@ i18n
         interpolation: {
             escapeValue: false, // react already safes from xss
         },
+
         resources: {
             en: {
-                translation: LanguagesArray.en.navBar
+                translation: LanguagesArray.en
             },
             hi: {
-                translation: LanguagesArray.hi.navBar
+                translation: LanguagesArray.hi
             }
         },
+        keySeparator: ".",
+
     });
 
 export default i18n;

@@ -1,29 +1,30 @@
 "use client"
+import { Button } from "@repo/ui/button";
 import { AlignLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 
 export function NavBar() {
     const { t, i18n } = useTranslation()
+    const router = useRouter()
     return <>
-        <div className="  flex bg-green-400 justify-between px-6 py-5 z-50 bg-transparent  p-6 rounded-2xl shadow-xl  ">
+        <div className="  flex bg-green-400 justify-between items-center px-6 py-5 z-50 bg-transparent  p-6 rounded-2xl shadow-xl  ">
             {/*  logo */}
             <div className="max-md:hidden">
-                {/* <h1 >Farm Vision</h1>
-                <h1 >Farmvison</h1> */}
-
                 <img className="h-7 w-36" src="/farmvisonLogo.png" alt="" />
             </div>
 
 
             {/* navbar items */}
             <div >
-                <div className="flex gap-10 max-md:hidden">
+                <div className="flex gap-10  max-md:hidden">
                     <div>
-                        <h1>{t('home')}</h1>
+                        <h1>{t('navBar.home')}</h1>
                     </div>
                     <div>
-                        <h1>{t("feature")}</h1>
+                        <h1>{t("navBar.feature")}</h1>
                         {/* display the options when hover on the features */}
                         <select name="" id="" className="hidden">
                             <option value="weather">Weather</option>
@@ -36,10 +37,10 @@ export function NavBar() {
                         </select>
                     </div>
                     <div>
-                        <h1>Profile</h1>
+                        <h1>{t('navBar.profile')}</h1>
                     </div>
                     <div>
-                        <h1>help</h1>
+                        <h1>{t('navBar.help')}</h1>
                     </div>
                 </div>
                 <div>
@@ -48,19 +49,19 @@ export function NavBar() {
             </div>
 
             {/* language */}
-            <div className="flex gap-6">
+            <div className="flex gap-6 items-center ">
                 <div>
                     {/*  */}
-                    <select name="" id="" onChange={(e) => { i18n.changeLanguage(`${e.currentTarget.value}`) }} >
-                        <option value="en">English</option>
+                    <select className="outline-none px-4 border border-black rounded bg-[#c2f1c1]  " onChange={(e) => { i18n.changeLanguage(`${e.currentTarget.value}`) }} >
+                        <option value="en"  >English</option>
                         <option value="hi">Hindi</option>
                     </select>
                 </div>
                 <div>
-                    <button>Login</button>
-                </div>
-                <div>
-                    <button>SignIn</button>
+                    <Button placeholder={t('navBar.signIn')} type="secondary" onClick={() => {
+                        console.log("sigin in")
+                        router.push('/signup')
+                    }} />
                 </div>
             </div>
         </div>

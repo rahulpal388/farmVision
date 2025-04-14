@@ -9,7 +9,7 @@ export function FeatureSectionCart({ isReverse, heading, description, src }: {
 }) {
 
     return <>
-        <div className={`flex gap-6 mb-10 justify-evenly  ${isReverse && "flex-row-reverse"} items-center px-3 border bg-green-200 border-green-600 py-3  rounded shadow-xl  `}>
+        <div className={`flex gap-6 mb-10 justify-evenly  ${isReverse && "flex-row-reverse"} items-center px-3 border bg-[#92e491] border-green-600 py-3  rounded shadow-xl  `}>
             <div className="w-1/2 max-sm:w-full " >
                 <h1 className="text-2xl text-center font-semibold text-green-600 mb-6 ">{heading}</h1>
                 <p className="text-center">{description}</p>

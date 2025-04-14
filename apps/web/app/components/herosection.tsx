@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 
 
 export function HeroSection() {
+    const { t } = useTranslation()
     return (
         <div className="relative w-full top-0 left-0 overflow-hidden  ">
             {/* Background Video */}
@@ -20,20 +22,20 @@ export function HeroSection() {
                 {/* Left Content */}
                 <div className="w-full lg:w-1/2 flex flex-col items-center text-white text-center lg:text-left">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
-                        <span className="text-green-600">EMPOWER YOUR FARM WITH AI</span>
+                        <span className="text-green-600">{t('mainSection.heading')}</span>
                         <br />
                         <span className="text-lg sm:text-xl font-normal">
-                            Pick crops by market trends and connect with farmers — all in one.
+                            {t('mainSection.paragraph')}
                         </span>
                     </h1>
                     <button className="mt-8 px-6 py-2 bg-green-600 text-white rounded-md text-lg hover:bg-green-700 transition">
-                        Join Now
+                        {t('mainSection.button')}
                     </button>
                 </div>
 
                 {/* Right Weather Card */}
-                <div className="hidden lg:flex w-64 h-64 bg-green-100 text-black rounded-lg border justify-center items-center text-xl font-medium">
-                    Weather
+                <div className="hidden lg:flex w-64 h-64 bg-[#c2f1c1] text-black rounded-lg border justify-center items-center text-xl font-medium">
+                    {t('mainSection.weather')}
                 </div>
             </div>
         </div>

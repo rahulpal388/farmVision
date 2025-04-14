@@ -4,14 +4,12 @@ import { NavBar } from "./components/NavBar";
 import { FeatureSection } from "../pages/featureSection";
 import { Footer } from "../pages/footer";
 import { useTranslation } from "react-i18next";
+import { Button } from "@repo/ui/button";
 
 export default function Home() {
 
   return <>
-    <div className="">
-
-
-
+    <div >
 
       <div>
         <NavBar />
