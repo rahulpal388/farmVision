@@ -1,13 +1,19 @@
 import express, { Router } from "express";
-import { UserLogin, UserLogout, UserResister } from "../controllers/user.controlles.js";
-import { userExits } from "../middlewares/checkuser.middleware.js";
-import { isUserAuthenticated } from "../middlewares/user.authcheck.js";
+import { checkUserExist } from "../middlewares/checkUserExist.js";
+import { createUser } from "../controllers/createUser.js";
+import { checkPasswordAndGenerateTokens } from "../middlewares/checkPasswordAndGenerateTokens.js";
+import { loginUser } from "../controllers/loginUser.js";
+import { getWeather } from "../controllers/getWeather.js";
+import { getAccessToken } from "../controllers/getAccessToken.js";
 
 const router: Router = express.Router()
 
-router.route("/register").post(UserResister)
-router.route("/login").get(userExits, UserLogin)
-router.route("/logout").post(isUserAuthenticated, UserLogout)
 
+router.post("/signup", checkUserExist, createUser, loginUser);
+router.post("/login", checkPasswordAndGenerateTokens, loginUser)
+router.get("/weather", getWeather)
+router.post("/getAccessToken", getAccessToken)
 
 export default router
+
+

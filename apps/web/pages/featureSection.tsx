@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { FeatureSectionCart } from "../app/components/featureSectionCart";
+import { FeatureSectionCart } from "../components/featureSectionCart";
 
 
 const farmVisionFeatures = [

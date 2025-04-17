@@ -22,5 +22,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.13.1",
     "prisma": "^6.5.0"
+  },
+  "devDependencies": {
+    "@repo/constants":"workspace:*"
   }
 }

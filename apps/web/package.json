@@ -12,8 +12,10 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
+    "@types/axios": "^0.14.4",
     "@types/i18next": "^13.0.0",
     "@types/react-i18next": "^8.1.0",
+    "axios": "^1.8.4",
     "date-fns": "^4.1.0",
     "i18next": "^24.2.3",
     "i18next-resources-to-backend": "^1.2.1",

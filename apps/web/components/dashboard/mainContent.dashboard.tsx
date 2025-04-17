@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react"
-import { ICurrentItems } from "../../dashboard/layout"
+import { ICurrentItems } from "../../app/dashboard/[userId]/layout"
 import { Weather } from "./mainDashboardPage/weather"
 import { SoilHealth } from "./mainDashboardPage/soilHealth"
 import { Chats } from "./mainDashboardPage/chats"

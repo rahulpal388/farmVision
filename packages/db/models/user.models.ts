@@ -1,10 +1,11 @@
 import mongose, { Schema } from "mongoose"
 import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
+import { ACCESS_SECRET, REFRESH_SECRET } from "@repo/constants/constant"
 
 export interface IUser extends Document {
     _id: Schema.Types.ObjectId
-    username: string,
+    name: string,
     email: string,
     password: string,
     refresToken: string,
@@ -17,7 +18,7 @@ export interface IUser extends Document {
 
 
 const UserSchema = new Schema<IUser>({
-    username: {
+    name: {
         type: String,
         unique: true,
         require: true
@@ -32,10 +33,12 @@ const UserSchema = new Schema<IUser>({
         require: true
     },
     refresToken: {
-        type: String
+        type: String,
+        default: null
     },
     avatar: {
-        type: String
+        type: String,
+        default: null
     }
 })
 
@@ -60,13 +63,13 @@ UserSchema.methods.checkPassword = async function (this: IUser, userPassword: st
 UserSchema.methods.generateAccessToken = function (this: IUser): string {
     return jwt.sign({
         _id: this._id
-    }, "dfewh&^%^&%^5621738qwbsDDDvw21t3876*&^*&62", { expiresIn: "1d" })
+    }, ACCESS_SECRET, { expiresIn: "1d" })
 }
 
 UserSchema.methods.generateRefrestoken = function (this: IUser): string {
     return jwt.sign({
         _id: this._id
-    }, "dfewh&^%^&%hewnfihd%^$&^%68726v723tv76stHXVSAG", { expiresIn: "10d" })
+    }, REFRESH_SECRET, { expiresIn: "10d" })
 
 }
 

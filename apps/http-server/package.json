@@ -6,23 +6,31 @@
   "scripts": {
     "dev": "tsc -b &&  node -r dotenv/config ./dist/index.js",
     "start": "node -r dotenv/config ./dist/index.js",
-    "build":"tsc -b"
+    "build": "tsc -b"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*",
+    "@repo/zod": "workspace:*",
+    "@repo/constants": "workspace:*"
   },
   "dependencies": {
     "@repo/db": "workspace:*",
     "@repo/utils": "workspace:*",
+    "@types/axios": "^0.14.4",
     "@types/bcrypt": "^5.0.2",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
     "@types/dotenv": "^8.2.3",
     "@types/express": "^5.0.1",
     "@types/jsonwebtoken": "^9.0.9",
+    "axios": "^1.8.4",
     "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2"

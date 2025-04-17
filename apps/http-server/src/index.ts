@@ -1,16 +1,19 @@
 import express from "express";
-import bcrypt from "bcrypt"
-import jwt from "jsonwebtoken"
 import { connectDB } from "@repo/db/index";
-import * as dotenv from "dotenv"
-import { UserModel } from "@repo/db/userModal"
+import cors from "cors"
+import cookieParser from "cookie-parser"
 
-dotenv.config({
-    path: "./env"
-})
+
+
 
 const app = express();
 app.use(express.json())
+app.use(cors({
+    origin: "http://localhost:3000",
+    credentials: true
+}))
+
+app.use(cookieParser())
 // wait to connect to database
 connectDB().then(() => {
     app.listen(8080, () => {
@@ -23,7 +26,7 @@ connectDB().then(() => {
 import userRouter from "./routes/user.router.js"
 
 
+
 // routers
 app.use("/api/v1/user", userRouter)
-
 

@@ -4,7 +4,7 @@ import { error } from "console"
 import Link from "next/link"
 import { useForm, ValidationRule } from "react-hook-form"
 
-interface IForm {
+export interface IForm {
     name: string,
     email: string,
     password: string,
@@ -12,13 +12,13 @@ interface IForm {
 }
 
 
-export function AuthPage({ type }: {
-    type: "signin" | "signup"
+export function AuthPage({ type, onSubmit }: {
+    type: "signin" | "signup",
+    onSubmit: (data: IForm) => void
+
 }) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<IForm>()
-    function onSubmit(data: IForm) {
-        console.log(data)
-    }
+
 
 
     const validatePassword: Record<string, ValidationRule<any>> | undefined = type === "signup" ? {

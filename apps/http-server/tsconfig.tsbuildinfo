@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/controllers/user.controlles.ts","./src/middlewares/checkuser.middleware.ts","./src/middlewares/user.authcheck.ts","./src/routes/user.router.ts"],"version":"5.7.3"}
+{"root":["./src/index.ts","./src/controllers/createUser.ts","./src/controllers/getAccessToken.ts","./src/controllers/getWeather.ts","./src/controllers/loginUser.ts","./src/middlewares/checkPasswordAndGenerateTokens.ts","./src/middlewares/checkUserExist.ts","./src/routes/user.router.ts"],"version":"5.7.3"}
